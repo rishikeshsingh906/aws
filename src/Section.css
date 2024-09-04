@@ -1,0 +1,32 @@
+.protection-section {
+    background-color: #562222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+    z-index: index 7;
+  }
+  
+  .toggle-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .toggle-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  
+  .toggle-button.active {
+    background-color: #000;
+    color: #fff;
+  }
+  .protection-section h2{
+    color:white;
+  }
+  
