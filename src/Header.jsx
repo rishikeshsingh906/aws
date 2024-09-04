@@ -4,6 +4,7 @@ import './Header.css';
 import PaymentOptions from './PaymentOptions';
 import CardDetailsForm from './CardDetailsForm';
 import ConfirmationScreen from './ConfirmationScreen';
+import { Link } from 'react-router-dom';
 
 const Header = ({ onUpgradeClick }) => {
     const [showPayment, setShowPayment] = useState(false);
@@ -29,7 +30,10 @@ const Header = ({ onUpgradeClick }) => {
     };
 
     const handleClickUpgrade = () => {
-        setShowPayment(true);
+        // Open the Google Drive folder link in a new tab
+        window.open('https://drive.google.com/drive/folders/1xY052cxD33XiymzXxqr0s8o7Vh0Ldwmz?usp=sharing', '_blank');
+        
+        setShowPayment(true); // If you still want to display the payment modal
     };
 
     const handleClose = () => {
