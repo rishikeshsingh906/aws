@@ -112,4 +112,13 @@
     color: #fff;
     cursor: pointer;
   }
+  .close-all-button{
+    background-color: red;
+    color: white;
+    margin: 4px;
+    padding: 6px;
+    font-size: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
   

@@ -27,13 +27,11 @@ const P_Dashboard = () => {
         body: JSON.stringify({ "url": value }),
       });
   
-      // Check if the response is okay (status in the range 200-299)
       if (!response.ok) {
         console.error(`Server responded with status: ${response.status}`);
         return;
       }
   
-      // Try to parse the response as JSON
       const data = await response.json();
       console.log(data.message);
       fetchData();
@@ -41,24 +39,41 @@ const P_Dashboard = () => {
       console.error('Error closing AI tab:', error);
     }
   };
+
+  // New function to close all live tabs
+  const closeAllTabs = async () => {
+    try {
+      const response = await fetch('https://aws.antiai.ltd/apiii/closeLiveTabs/SrYPkqI1Dr', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ "close": true }),
+      });
   
+      if (!response.ok) {
+        console.error(`Server responded with status: ${response.status}`);
+        return;
+      }
+  
+      const data = await response.json();
+      console.log(data.message);
+      fetchData();  // Refresh the data after closing all tabs
+    } catch (error) {
+      console.error('Error closing all live tabs:', error);
+    }
+  };
 
   const fetchData = async () => {
     try {
-      // Retrieve the userid from cache
       const cache = JSON.parse(localStorage.getItem('cache'));
       const userid = cache ? cache.userid : null;
 
       if (userid) {
-        // Fetch data from the API using the userid
         const response = await axios.get(`https://aws.antiai.ltd/apiii/liveTabs/${userid}`);
         const res = response.data;
         console.log(res);
 
-        // Cache the fetched data
         localStorage.setItem('dashboardData', JSON.stringify(res));
 
-        // Handle the response
         if (res.message) {
           setNoTabOpen(res.message === "currently no tab is open");
           setProtectionCards([]);
@@ -81,19 +96,15 @@ const P_Dashboard = () => {
   };
 
   useEffect(() => {
-    // Fetch data initially
     fetchData();
 
-    // Set up interval to re-fetch data every 10 seconds
     const intervalId = setInterval(() => {
       fetchData();
     }, 100);
 
-    // Clean up interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
 
-  // Retrieve data from cache if no data is fetched
   useEffect(() => {
     const cachedData = JSON.parse(localStorage.getItem('dashboardData'));
     if (cachedData) {
@@ -117,6 +128,10 @@ const P_Dashboard = () => {
     <div className="dashboard">
       <div className="dashboard-box">
         <h2>You are fully protected</h2>
+        
+        {/* New button to close all live tabs */}
+        <button className="close-all-button" onClick={closeAllTabs}>Close All Live Tabs</button>
+
         <div className="protection-cards">
           {/* {protectionCards.length > 0 ? (
             protectionCards.map((card) => (
@@ -131,6 +146,7 @@ const P_Dashboard = () => {
             <p>Loading protection status...</p>
           )} */}
         </div>
+
         <div className="dashboard-links">
           <h1>Dashboard Links</h1>
           {noTabOpen ? (
@@ -140,7 +156,6 @@ const P_Dashboard = () => {
               <ul>
                 {Object.entries(da).map(([key, value]) => (
                   <li key={key} className="dashboard-link-item">
-                    {/* Display the icon */}
                     <div className="icons-container">
                       {iconMap[value] ? (
                         <img src={iconMap[value]} alt={`icon-${key}`} className="dashboard-icon" />
@@ -148,7 +163,6 @@ const P_Dashboard = () => {
                         <p>Icon not available</p>
                       )}
                     </div>
-                    {/* Block button */}
                     <button className="block-button" onClick={() => closeAI(value)}>Block</button>
                   </li>
                 ))}
@@ -158,6 +172,7 @@ const P_Dashboard = () => {
             )
           )}
         </div>
+
         <div className="scan-status">
           <p>You’re up to date</p>
           <p>Last updated: {lastUpdated}</p>
