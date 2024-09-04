@@ -1,1 +1,1 @@
-serve -s dist -l 5000
+serve -s dist -l 2000
