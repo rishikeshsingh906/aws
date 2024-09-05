@@ -135,7 +135,7 @@ const P_Dashboard = () => {
           className={`close-all-button ${closeAllColor ? 'green' : 'red'}`} 
           onClick={closeAllTabs}
         >
-         Terminate All Tabs
+         Terminate AI Tabs
         </button>
 
         <div className="protection-cards">
@@ -143,7 +143,7 @@ const P_Dashboard = () => {
         </div>
 
         <div className="dashboard-links">
-          <h1>Dashboard Links</h1>
+          <h1>Active AI Tabs</h1>
           {noTabOpen ? (
             <p>No tab is open</p>
           ) : (
@@ -163,7 +163,7 @@ const P_Dashboard = () => {
                 ))}
               </ul>
             ) : (
-              <p>Loading links...</p>
+              <p>Loading AI Tabs ...</p>
             )
           )}
         </div>
