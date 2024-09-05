@@ -12,6 +12,7 @@ const P_Dashboard = () => {
   const [lastUpdated, setLastUpdated] = useState('a few seconds ago');
   const [da, setDa] = useState({});
   const [noTabOpen, setNoTabOpen] = useState(false);
+  const [closeAllColor, setCloseAllColor] = useState(false);  // New state for button color
 
   const iconMap = {
     "https://chatgpt.com": ChatGPTIcon,
@@ -40,7 +41,6 @@ const P_Dashboard = () => {
     }
   };
 
-  // New function to close all live tabs
   const closeAllTabs = async () => {
     try {
       const response = await fetch('https://aws.antiai.ltd/apiii/closeLiveTabs/SrYPkqI1Dr', {
@@ -56,7 +56,8 @@ const P_Dashboard = () => {
   
       const data = await response.json();
       console.log(data.message);
-      fetchData();  // Refresh the data after closing all tabs
+      setCloseAllColor(true);  // Toggle color state
+      fetchData();  
     } catch (error) {
       console.error('Error closing all live tabs:', error);
     }
@@ -129,22 +130,16 @@ const P_Dashboard = () => {
       <div className="dashboard-box">
         <h2>You are fully protected</h2>
         
-        {/* New button to close all live tabs */}
-        <button className="close-all-button" onClick={closeAllTabs}>Close All Live Tabs</button>
+        {/* Updated button with dynamic class based on state */}
+        <button 
+          className={`close-all-button ${closeAllColor ? 'green' : 'red'}`} 
+          onClick={closeAllTabs}
+        >
+         Terminate All Tabs
+        </button>
 
         <div className="protection-cards">
-          {/* {protectionCards.length > 0 ? (
-            protectionCards.map((card) => (
-              <ProtectionCard
-                key={card.id}
-                icon={card.icon}
-                title={card.url}
-                status={card.status}
-              />
-            ))
-          ) : (
-            <p>Loading protection status...</p>
-          )} */}
+          {/* Protection Cards here */}
         </div>
 
         <div className="dashboard-links">

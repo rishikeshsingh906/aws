@@ -3,6 +3,7 @@ import logo from './IMAGES/logo.png';
 import './Header.css';
 import PaymentOptions from './PaymentOptions';
 import CardDetailsForm from './CardDetailsForm';
+import profileIcon from './IMAGES/avtar.jpg'
 import ConfirmationScreen from './ConfirmationScreen';
 import { Link } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ const Header = ({ onUpgradeClick }) => {
         // Retrieve cached data
         const cache = JSON.parse(localStorage.getItem('cache'));
         if (cache && cache.fullname) {
+            // console.log(cache)
             setUsername(cache.fullname); // Update the username with the cached fullname
         }
     }, []);
@@ -30,10 +32,11 @@ const Header = ({ onUpgradeClick }) => {
     };
 
     const handleClickUpgrade = () => {
-        // Open the Google Drive folder link in a new tab
-        window.open('https://drive.google.com/drive/folders/1xY052cxD33XiymzXxqr0s8o7Vh0Ldwmz?usp=sharing', '_blank');
-        
         setShowPayment(true); // If you still want to display the payment modal
+    };
+
+    const downExtension = () => {
+        window.open('https://drive.google.com/drive/folders/1xY052cxD33XiymzXxqr0s8o7Vh0Ldwmz?usp=sharing', '_blank');
     };
 
     const handleClose = () => {
@@ -48,10 +51,14 @@ const Header = ({ onUpgradeClick }) => {
             </div>
             <div className="center">
                 <button className="upgrade-btn" onClick={handleClickUpgrade}>Upgrade</button>
-                <button className="view-options-btn">View options</button>
+                <button className="view-options-btn" onClick={downExtension}>Download</button>
             </div>
             <div className="right">
                 <span className="user-name">{username}</span> {/* Display the updated username */}
+                <img src={profileIcon} alt="Profile" className="profile-icon" style={{ width: "30px",
+        height: "30px",
+        borderRadius: "50%", 
+        marginRight: "10px"}} /> 
                 <button className="close-btn">X</button>
             </div>
             {showPayment && (

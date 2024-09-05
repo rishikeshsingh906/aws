@@ -1,6 +1,6 @@
 
 .sidebar {
-    width: 220px;
+    width: 20%;
     background-color: #0a2a47;
     height: 100vh;
     display: flex;
@@ -8,7 +8,7 @@
     align-items: center;
     padding: 20px 0;
     color: white;
-    margin-top: -20px;
+   
 }
 
 /* .logo img {

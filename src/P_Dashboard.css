@@ -1,124 +1,204 @@
-/* src/App.css */
-/* body {
-    
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fbfbfe;
-    color: #080808; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  } */
-  
-  .dashboard {
-    text-align: center;
-    padding: 30px;
-    background-color: #2b3244;
-    border-radius: 10px; 
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); 
-  }
-  .dashboard-box{
-    padding: 40px;
-    margin-top: 30px;
-  }
-  
-  h2 {
-    color: #4caf50;
-    padding-bottom: 40px;
-    font-size: 40px;
-  }
-  
-  .protection-cards {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    gap: 50px;
-  }
-  
-  .protection-card {
-    background-color: #c7ccd8;
-    border-radius: 8px;
-    padding: 20px;
-    width: 250px;
-    margin: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .protection-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .protection-card .title {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .protection-card .status {
-    margin-top: 5px;
-    color: #4caf50;
-  }
-  
-  .protection-card .icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-  }
-  
-  .scan-status {
-    margin-top: 20px;
-    font-size: 14px;
-    padding: 15px;
-  }
-  
-  .scan-status p {
-    margin: 5px 0;
-  
-  }
-  
-  .scan-status p:first-child {
-    color: #4caf50;
-  }
-  
-  .scan-status p:last-child {
-    color: #888;
-  }
-  
 
-  .dashboard-link-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+/* Dashboard Container */
+.dashboard {
+  width: 100%;
+  /* max-width: 1200px; */
+  text-align: center;
+  padding: 20px;
+  background-color: #2b3244;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  /* margin: 20px auto; */
+  opacity: 0.8;
+}
+
+/* Dashboard Box */
+.dashboard-box {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Header Text */
+h2 {
+  color: #4caf50;
+  padding-bottom: 20px;
+  font-size: 32px;
+}
+
+
+.close-all-button {
+  color: white;
+  margin: 10px auto; /* Center button horizontally */
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block; /* Ensure it spans the full width available */
+  transition: background-color 0.3s ease;
+}
+
+.close-all-button.red {
+  background-color: #f00;
+}
+
+.close-all-button.green {
+  background-color: #4caf50;
+}
+
+.close-all-button:hover {
+  filter: brightness(90%);
+}
+
+/* Protection Cards Container */
+.protection-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards */
+  margin-bottom: 20px;
+  gap: 20px; /* Reduce gap between cards */
+}
+
+/* Individual Protection Card */
+.protection-card {
+  background-color: #c7ccd8;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 250px; /* Limit card width */
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.protection-card:hover {
+  transform: scale(1.05);
+}
+
+.protection-card .title {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.protection-card .status {
+  margin-top: 5px;
+  color: #4caf50;
+}
+
+.protection-card .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Scan Status Section */
+.scan-status {
+  margin-top: 20px;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.scan-status p {
+  margin: 5px 0;
+}
+
+.scan-status p:first-child {
+  color: #4caf50;
+}
+
+.scan-status p:last-child {
+  color: #888;
+}
+.dashboard-links p{
+  color: white;
+}
+
+/* Dashboard Links Section */
+.dashboard-link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between icon and button */
+  margin-bottom: 10px;
+}
+
+.icons-container {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Block Button */
+.block-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #f00;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.block-button:hover {
+  background-color: greenyellow; /* Darken on hover */
+}
+
+/* Close All Tabs Button */
+.close-all-button {
+  background-color: #f00;
+  color: white;
+  margin: 10px auto; /* Center button horizontally */
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block; /* Ensure it spans the full width available */
+  transition: background-color 0.3s ease;
+}
+
+/* .close-all-button:hover {
+  background-color: green;
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+      font-size: 28px;
   }
-  
-  .icons-container {
-    display: flex;
-    gap: 10px;
-    margin-right: auto; /* Align the button to the right */
+
+  .protection-card {
+      width: 100%;
+      max-width: 100%; /* Make cards take full width on small screens */
   }
-  
-  .dashboard-icon {
-    width: 30px; /* Adjust the size as needed */
-    height: 30px;
-  }
-  
+
   .block-button {
-    padding: 5px 10px;
-    border: none;
-    background-color: #f00; /* Red color for the Block button */
-    color: #fff;
-    cursor: pointer;
+      font-size: 14px; /* Smaller button text on small screens */
   }
-  .close-all-button{
-    background-color: red;
-    color: white;
-    margin: 4px;
-    padding: 6px;
-    font-size: 22px;
-    border-radius: 10px;
-    cursor: pointer;
+
+  .close-all-button {
+      font-size: 16px;
+      padding: 8px 15px;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+      width: 95%;
+      padding: 10px;
+  }
+
+  h2 {
+      font-size: 24px;
+  }
+
+  .close-all-button {
+      font-size: 14px;
+      padding: 6px 10px;
+  }
+
+  .block-button {
+      font-size: 12px;
+  }
+}

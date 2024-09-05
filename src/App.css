@@ -1,39 +1,19 @@
- /* body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-} */
-/* src/App.css */
-.payment-dashboard {
-  /* position: fixed; */
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
-  background-color: rgba(224, 228, 12, 0.8);
+/* App.css or a relevant CSS file */
+.app {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  flex-direction: column; /* Stack header on top and container below */
+  height: 100vh; /* Full viewport height */
 }
 
-.payment-section {
-  background-color: rgb(20, 19, 19);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+header {
+  flex-shrink: 0; /* Prevent header from shrinking */
 }
 
-
-
-
-/* .app-container {
+.container-comp {
+  flex: 1; /* Allow container to take remaining space */
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+  flex-direction: row;
+  margin: 23px;
+  overflow: hidden;
+  padding-top: 20px; /* Adjust if needed to ensure proper spacing from the header */
 }
-
-.content-container {
-  display: flex;
-  flex: 1;
-} */ 

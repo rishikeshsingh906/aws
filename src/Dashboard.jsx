@@ -36,12 +36,12 @@ function ToggleSwitch() {
 
   return (
     <div className="toggle-switch" onClick={toggleBlock}>
-      <div className={`switch-handle ${isBlocked ? 'blocked' : 'Unblocked'}`}>
-        {isBlocked ? 'Unblock' : 'Block'}
+      <div className={`switch-handle ${isBlocked ? 'blocked' : 'unblocked'}`}>
+        {isBlocked ? 'Block' : 'Unblock'}
       </div>
-      <div className="switch-label">
-        {isBlocked ? '' : ''}
-      </div>
+      {/* <div className="switch-label">
+        {isBlocked ? 'Blocked' : 'Unblocked'}
+      </div> */}
     </div>
   );
 }
