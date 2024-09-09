@@ -2,7 +2,7 @@
 .app {
   display: flex;
   flex-direction: column; /* Stack header on top and container below */
-  height: 100vh; /* Full viewport height */
+  height: 100%;
 }
 
 header {
@@ -15,5 +15,6 @@ header {
   flex-direction: row;
   margin: 23px;
   overflow: hidden;
-  padding-top: 20px; /* Adjust if needed to ensure proper spacing from the header */
+  padding-top: 20px; 
+  height: 100%;/* Adjust if needed to ensure proper spacing from the header */
 }

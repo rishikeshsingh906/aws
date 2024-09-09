@@ -1,0 +1,36 @@
+
+.setting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    background-color: #f8f9fa; 
+  }
+  
+  .setting-container h1 {
+    font-size: 2.5rem;
+    color: #333; 
+    margin-bottom: 20px;
+  }
+  
+  .setting-container img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .setting-container img:hover {
+    transform: scale(1.05); 
+  }
+  .Setting{
+    z-index: 1;
+  }
+  .setImg{
+    opacity: 0.7;
+    margin-left:27%;
+  }
+  

@@ -5,14 +5,14 @@ import './P_Dashboard.css';
 import ChatGPTIcon from './IMAGES/icons/ChatGPT.png';
 import ClaudeIcon from './IMAGES/icons/Claud.png';
 import Gemini from './IMAGES/icons/Gimini.png';
-// Add more imports for other icons if needed
+
 
 const P_Dashboard = () => {
   const [protectionCards, setProtectionCards] = useState([]);
   const [lastUpdated, setLastUpdated] = useState('a few seconds ago');
   const [da, setDa] = useState({});
   const [noTabOpen, setNoTabOpen] = useState(false);
-  const [closeAllColor, setCloseAllColor] = useState(false);  // New state for button color
+  const [closeAllColor, setCloseAllColor] = useState(false); 
 
   const iconMap = {
     "https://chatgpt.com": ChatGPTIcon,
@@ -56,7 +56,7 @@ const P_Dashboard = () => {
   
       const data = await response.json();
       console.log(data.message);
-      setCloseAllColor(true);  // Toggle color state
+      setCloseAllColor(true);  
       fetchData();  
     } catch (error) {
       console.error('Error closing all live tabs:', error);
@@ -101,7 +101,8 @@ const P_Dashboard = () => {
 
     const intervalId = setInterval(() => {
       fetchData();
-    }, 100);
+    }, 10000
+  );
 
     return () => clearInterval(intervalId);
   }, []);
@@ -130,7 +131,7 @@ const P_Dashboard = () => {
       <div className="dashboard-box">
         <h2>You are fully protected</h2>
         
-        {/* Updated button with dynamic class based on state */}
+        
         <button 
           className={`close-all-button ${closeAllColor ? 'green' : 'red'}`} 
           onClick={closeAllTabs}
@@ -139,7 +140,7 @@ const P_Dashboard = () => {
         </button>
 
         <div className="protection-cards">
-          {/* Protection Cards here */}
+          
         </div>
 
         <div className="dashboard-links">

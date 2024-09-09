@@ -19,6 +19,7 @@
 .center {
     display: flex;
     gap: 5px;
+    margin-left: 12%;
 }
 
 .upgrade-btn, .view-options-btn {
