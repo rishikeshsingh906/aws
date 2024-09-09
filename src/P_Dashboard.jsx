@@ -135,7 +135,7 @@ const P_Dashboard = () => {
           className={`close-all-button ${closeAllColor ? 'green' : 'red'}`} 
           onClick={closeAllTabs}
         >
-         Terminate AI Tabs
+         Terminate AI 
         </button>
 
         <div className="protection-cards">

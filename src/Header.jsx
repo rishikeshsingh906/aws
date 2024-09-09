@@ -3,21 +3,21 @@ import logo from './IMAGES/logo.png';
 import './Header.css';
 import PaymentOptions from './PaymentOptions';
 import CardDetailsForm from './CardDetailsForm';
-import profileIcon from './IMAGES/avtar.jpg'
+import profileIcon from './IMAGES/avtar.png'
 import ConfirmationScreen from './ConfirmationScreen';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';  
 
 const Header = ({ onUpgradeClick }) => {
     const [showPayment, setShowPayment] = useState(false);
     const [orderConfirmed, setOrderConfirmed] = useState(false);
-    const [username, setUsername] = useState('Rishikesh Singh'); // Default value
+    const [username, setUsername] = useState('Rishikesh Singh'); 
 
     useEffect(() => {
-        // Retrieve cached data
+       
         const cache = JSON.parse(localStorage.getItem('cache'));
         if (cache && cache.fullname) {
-            // console.log(cache)
-            setUsername(cache.fullname); // Update the username with the cached fullname
+            
+            setUsername(cache.fullname); 
         }
     }, []);
 
@@ -32,7 +32,7 @@ const Header = ({ onUpgradeClick }) => {
     };
 
     const handleClickUpgrade = () => {
-        setShowPayment(true); // If you still want to display the payment modal
+        setShowPayment(true); 
     };
 
     const downExtension = () => {
@@ -55,11 +55,11 @@ const Header = ({ onUpgradeClick }) => {
             </div>
             <div className="right">
                 <span className="user-name">{username}</span> {/* Display the updated username */}
-                <img src={profileIcon} alt="Profile" className="profile-icon" style={{ width: "30px",
+                <img src={profileIcon} alt="Profile" className="profile-icon" style={{ width: "40px",
         height: "30px",
         borderRadius: "50%", 
         marginRight: "10px"}} /> 
-                <button className="close-btn">X</button>
+                <button className="close-btn"></button>
             </div>
             {showPayment && (
                 <div className="modal-overlay">

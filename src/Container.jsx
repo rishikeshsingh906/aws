@@ -1,16 +1,16 @@
-// Container.js
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Dashboard from './Dashboard';
 import P_Dashboard from './P_Dashboard';
-import BackgroundAnimation from './BackgroundAnimation'; // Import the background animation component
+import BackgroundAnimation from './BackgroundAnimation';
 import "./container.css";
 
 function Container() {
   return (
     <div className='container-comp'>
-      <BackgroundAnimation /> {/* Add background animation here */}
+      <BackgroundAnimation /> 
       <Sidebar />
       <div className="content">
         <Routes>
