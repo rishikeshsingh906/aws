@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import GoogleIm from "../IMAGES/Google.png"; 
+
+import AppleIm from '../IMAGES/Apple1.png'; 
+import FacebookIm from '../IMAGES/Facebook.png'; 
+import './Login.css';  
 
 const Login = ({ onLoginSuccess }) => {
   const [username, setUsername] = useState('');
@@ -26,14 +31,12 @@ const Login = ({ onLoginSuccess }) => {
         sessionStorage.setItem('usertype', data.usertype);
         sessionStorage.setItem('personalemail', data.personalemail);
 
-        // Store data in local storage
         localStorage.setItem('token', data.token);
         localStorage.setItem('userid', data.userid);
         localStorage.setItem('fullname', data.fullname);
         localStorage.setItem('usertype', data.usertype);
         localStorage.setItem('personalemail', data.personalemail);
 
-        // Cache the data
         const cacheData = {
           token: data.token,
           userid: data.userid,
@@ -45,7 +48,7 @@ const Login = ({ onLoginSuccess }) => {
         localStorage.setItem('cache', JSON.stringify(cacheData));
 
         onLoginSuccess();
-        navigate('/dashboard'); // Redirect to the dashboard
+        navigate('/dashboard');
       } else {
         setError(data.message);
       }
@@ -55,34 +58,57 @@ const Login = ({ onLoginSuccess }) => {
   };
 
   const handleLogout = () => {
-    // Clear session and local storage
     sessionStorage.clear();
     localStorage.clear();
-    navigate('/login'); // Redirect to the login page
+    navigate('/login'); 
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', width: '300px' }}>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          style={{ marginBottom: '10px', padding: '10px' }}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          style={{ marginBottom: '10px', padding: '10px' }}
-        />
-        <button type="submit" style={{ padding: '10px' }}>Login</button>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-      </form>
-      <button onClick={handleLogout} style={{ marginTop: '20px', padding: '10px' }}>Logout</button>
-    </div>
+    // <div className="login-container">
+      <div className="login-box">
+      <div>
+        <h1 className="logo">ANTI AI</h1>
+      </div>
+        <h2 className="login-title">Connect with Anti-AI</h2>
+        <p className="login-subtitle">Sign in to Access Anti-AI Features</p>
+        <form className="form1" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="login-input"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="login-input"
+          />
+          <button type="submit" className="login-button">Sign In</button>
+          {error && <p className="login-error">{error}</p>}
+        </form>
+        <p className="login-forgot">Forget your login details?</p>
+        <div className="login-divider">
+          <span>Or sign in using</span>
+        </div>
+        <div className="login-social-icons">
+        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+          <img src={GoogleIm} alt="Google"  />
+        </a>
+        <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer">
+          <img src={AppleIm} alt="Apple" />
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <img src={FacebookIm} alt="Facebook" />
+        </a>
+        </div>
+        <p className="login-register">
+          New user? <a href="/register">Register now</a> Create an Account
+        </p>
+      </div>
+    // </div>
   );
 };
 

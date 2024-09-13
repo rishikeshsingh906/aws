@@ -46,7 +46,7 @@ const Header = ({ onUpgradeClick }) => {
     return (
         <header className="header">
             <div className="left">
-                <img src={logo} alt="logo" className="logo" />
+                <img src={logo} alt="logo" className="logo2" />
                 <h1>ANTI AI</h1>
             </div>
             <div className="center">

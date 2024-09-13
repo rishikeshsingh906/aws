@@ -8,11 +8,10 @@
     position: fixed;
     top: 0;
     width: 100%;
-    /* z-index: 1000; */
+    z-index: 1000; 
 }
 
-
-.logo {
+.logo2 {
     height: 40px;
 }
 
@@ -31,22 +30,11 @@
     cursor: pointer;
 }
 
-.view-options-btn {
-    background-color: #9365e5;
-}
-
 .right {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap; /* Allow wrapping */
-}
-.right profile-icon {
-    width: 30px;
-    height: 50x;
-    border-radius: 50%; 
-    margin-right: 10px;
-   
+    flex-wrap: wrap; 
 }
 
 .user-name {
@@ -70,18 +58,14 @@
     margin-left: 15px;
     font-size: medium;
     font-family: 'Ethnocentric';
-    src: url('path/to/ethnocentric-rg.woff2') format('woff2'),
-         url('path/to/ethnocentric-rg.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    display: flex;
 }
 
-/* Main content */
 .main-content {
-    margin-top: 80px; /* Adjust based on header height */
+    margin-top: 80px; 
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .header {
         padding: 10px;
@@ -89,39 +73,12 @@
         align-items: flex-start;
     }
 
-    .center {
+    .center, .right {
         flex-direction: column;
-        /* gap: 10px; */
-    }
-
-    .right {
-        flex-direction: row;
-        justify-content: space-between;
         width: 100%;
-        /* display: none; */
     }
 
-    .right profile-icon {
-        /* width: 3px;
-        height: 5px;
-        border-radius: 50%; 
-        margin-right: 10px; */
-        display: none;
-    }
-    
-
-    .user-name {
-        font-size: 14px;
-       display: none;
-    }
-
-    .upgrade-btn, .view-options-btn {
-        padding: 5px 10px;
-        display: none;
-    }
-
-    .close-btn {
-        font-size: 18px;
+    .user-name, .upgrade-btn, .view-options-btn, .close-btn, .profile-icon {
         display: none;
     }
 }

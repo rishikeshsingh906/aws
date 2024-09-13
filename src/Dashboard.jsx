@@ -21,15 +21,6 @@ function Dashboard() {
         <FeatureBox icon="👆" title="Id Protection" />
         <FeatureBox icon="⚡" title="Add a quick action" />
       </div>
-
-      {/* <div className="features-grid">
-        <FeatureBox icon="🔒" title="Block Ai tools" />
-        <FeatureBox icon="🖥️" title="System Ai Scan" />
-        <FeatureBox icon="🔍" title="Vulnerability Ai Scan" />
-        <FeatureBox icon="Ai" title="Secure Ai Tools" />
-        <FeatureBox icon="👆" title="Id Protection" />
-        <FeatureBox icon="⚡" title="Add a quick action" />
-      </div> */}
       
       <p className="para">You can protect 2 more devices with your subscription. <a href="#">Install ANTI AI on a new device</a></p>
     </div>
