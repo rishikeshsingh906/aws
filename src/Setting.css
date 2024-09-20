@@ -161,3 +161,24 @@
       border-radius: 0;
     }
   }
+
+  @media (max-width: 768px) {
+    .setting-container {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 100px;
+      max-width: 75%;
+      border-radius: 10px;
+      /* margin-top: 36px; */
+      height: 111%;
+      margin-left: 25%;
+    }
+
+    .setting-section {
+      background-color: #2a2a2a;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      width: 173%;
+  }
+  }

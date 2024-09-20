@@ -94,4 +94,7 @@ img.profile-icon{
     .user-name, .upgrade-btn, .view-options-btn, .close-btn, .profile-icon {
         display: none;
     }
+    .right span{
+        display: none;
+    }
 }

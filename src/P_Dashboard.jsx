@@ -127,7 +127,7 @@ const P_Dashboard = () => {
   }, [noTabOpen]);
 
   return (
-    <div className="dashboard">
+    <div className="dashboard2">
       <div className="dashboard-box">
         <h2>You are fully protected</h2>
         
