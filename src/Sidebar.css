@@ -4,10 +4,11 @@
     background-color: #0a2a47;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
     padding: 20px 0;
     color: white;
+    height: 100%;
    
 }
 
@@ -22,14 +23,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* cursor: pointer; */
+    cursor: pointer;
+}
+
+.menu-item- {
+    width: 100%;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 75%;
 }
 
 .menu-item.active {
     background-color: #123456;
 }
+.menu-item-.active {
+    background-color: #123456;
+}
 
 .menu-item .icon {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+.menu-item- .icon {
     font-size: 32px;
     margin-bottom: 5px;
 }

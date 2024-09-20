@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+// Dashboard.jsx
+import React from 'react';
 import './Dashboard.css';
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
   return (
@@ -10,38 +12,20 @@ function Dashboard() {
       <div className="anti-ai-box">
         <h2>AntiAi protect your device</h2>
         <p>"Anti-AI is a tool that protects against the influence and risks of artificial intelligence, safeguarding users from potential risks associated with AI technology."</p>
-        <ToggleSwitch />
       </div>
       
       <div className="features-grid">
         <FeatureBox icon="🔒" title="Block Ai tools" />
         <FeatureBox icon="🖥️" title="System Ai Scan" />
-        <FeatureBox icon="🔍" title="Vulnerability Ai Scan" />
+        <Link to="/payments">
+          <FeatureBox icon="🔍" title="subscription" />
+        </Link>
         <FeatureBox icon="Ai" title="Secure Ai Tools" />
         <FeatureBox icon="👆" title="Id Protection" />
         <FeatureBox icon="⚡" title="Add a quick action" />
       </div>
       
       <p className="para">You can protect 2 more devices with your subscription. <a href="#">Install ANTI AI on a new device</a></p>
-    </div>
-  );
-}
-
-function ToggleSwitch() {
-  const [isBlocked, setIsBlocked] = useState(true);
-
-  const toggleBlock = () => {
-    setIsBlocked(!isBlocked);
-  };
-
-  return (
-    <div className="toggle-switch" onClick={toggleBlock}>
-      <div className={`switch-handle ${isBlocked ? 'blocked' : 'unblocked'}`}>
-        {isBlocked ? 'Block' : 'Unblock'}
-      </div>
-      {/* <div className="switch-label">
-        {isBlocked ? 'Blocked' : 'Unblocked'}
-      </div> */}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import './Header.css';
 import PaymentOptions from './PaymentOptions';
 import CardDetailsForm from './CardDetailsForm';
 import profileIcon from './IMAGES/avtar.png'
-import ConfirmationScreen from './ConfirmationScreen';
+// import ConfirmationScreen from './ConfirmationScreen';
 import { Link } from 'react-router-dom';  
 
 const Header = ({ onUpgradeClick }) => {
@@ -54,9 +54,10 @@ const Header = ({ onUpgradeClick }) => {
                 <button className="view-options-btn" onClick={downExtension}>Download</button>
             </div>
             <div className="right">
-                <span className="user-name">{username}</span> {/* Display the updated username */}
+                {/* <span className="user-name">{username}</span>  */}
+                <span className="icon">🔔</span> 
                 <img src={profileIcon} alt="Profile" className="profile-icon" style={{ width: "40px",
-        height: "30px",
+        height: "37px",
         borderRadius: "50%", 
         marginRight: "10px"}} /> 
                 <button className="close-btn"></button>

@@ -4,7 +4,6 @@ const Auth = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // You can add more logout logic here if needed, such as clearing session storage
     navigate('/');
   };
 

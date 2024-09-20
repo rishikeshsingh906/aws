@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './Header';
 import Container from './Container';
+import Payments from './Payments';
 import LoginForm from './AuthenticationPage/Login';
 
 const App = () => {
