@@ -101,7 +101,7 @@ const P_Dashboard = () => {
 
     const intervalId = setInterval(() => {
       fetchData();
-    }, 10000
+    }, 100
   );
 
     return () => clearInterval(intervalId);
