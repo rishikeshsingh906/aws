@@ -135,15 +135,26 @@
     background-color: #e6f0ff;
   }
   
-  /* Responsive Design */
+  
   @media (max-width: 768px) {
     .payment-container {
       flex-direction: column;
       padding: 10px;
-    }
+      width: 75%;
+      margin-left: 25%;
+  }
   
     .payment-box, .confirmation-box {
       width: 100%;
+    }
+    .payment-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+      background-color: #e6f0ff;
+      height: 100vh;
     }
   }
   

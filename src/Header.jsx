@@ -50,7 +50,7 @@ const Header = ({ onUpgradeClick }) => {
                 <h1>ANTI AI</h1>
             </div>
             <div className="center">
-                <button className="upgrade-btn" >Upgrade</button>
+                {/* <button className="upgrade-btn" onClick={handleClickUpgrade}>Upgrade</button> */}
                 <button className="view-options-btn" onClick={downExtension}>Download</button>
             </div>
             <div className="right">
