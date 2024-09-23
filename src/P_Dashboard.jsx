@@ -5,6 +5,13 @@ import './P_Dashboard.css';
 import ChatGPTIcon from './IMAGES/icons/ChatGPT.png';
 import ClaudeIcon from './IMAGES/icons/Claud.png';
 import Gemini from './IMAGES/icons/Gimini.png';
+import Copilot from './IMAGES/icons/Copilot.jpg';
+import Stability from './IMAGES/icons/Stability.jpg';
+import Replit from './IMAGES/icons/Reddit.jpg';
+import Rytr from './IMAGES/icons/Rytr.jpg';
+import Seo_Ai from './IMAGES/icons/Seo.jpg';
+import Jesper from './IMAGES/icons/Jesper.jpg';
+import Deepbrain from './IMAGES/icons/Deepbrain.jpg';
 
 
 const P_Dashboard = () => {
@@ -18,6 +25,15 @@ const P_Dashboard = () => {
     "https://chatgpt.com": ChatGPTIcon,
     "https://claude.ai": ClaudeIcon,
     "https://gemini.google.com": Gemini,
+    "https://replit.com/": Replit,
+    "https://copilot.microsoft.com/": Copilot,
+    "https://www.deepbrain.io/": Deepbrain,
+    "https://seo.ai/": Seo_Ai,
+    "https://rytr.me/": Rytr,
+    "https://stability.ai/": Stability,
+    "https://www.jasper.ai/" : Jesper,
+
+
   };
 
   const closeAI = async (value) => {

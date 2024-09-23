@@ -1,6 +1,5 @@
 .dashboard2 {
   width: 100%;
-
   text-align: center;
   padding: 20px;
   background-color: #2b3244;
@@ -177,4 +176,11 @@
     height: 160%;
     margin-left: 25%;
   }
+  .dashboard-link-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 31px;
+    gap: 89px;
+}
 }
