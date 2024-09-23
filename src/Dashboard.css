@@ -51,8 +51,9 @@
 }
 
 
-.features-grid p a {
-  color: yellow;
+.features-grid  a {
+  text-decoration: none;
+  color: #0a0909;
 }
 
 .feature-box {
@@ -69,10 +70,12 @@
 }
 
 .icon {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 10px;
 }
-
+span.icon {
+  font-size: 2.6em;
+}
 .toggle-switch {
   display: flex;
   justify-content: space-between;

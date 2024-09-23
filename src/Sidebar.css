@@ -43,6 +43,12 @@
     background-color: #123456;
 }
 
+.icon img{
+    width: 29px;
+    height: 29px;
+    mix-blend-mode: color-burn;
+}
+
 .menu-item .icon {
     font-size: 32px;
     margin-bottom: 5px;

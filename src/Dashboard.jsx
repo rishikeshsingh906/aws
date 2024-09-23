@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 function Dashboard() {
   return (
     <div className="dashboard">
-      <h1>You are safe</h1>
-      <p className="para">We're looking out for your device and data.</p>
+      <h1>YOU ARE SAFE</h1>
+      {/* <p className="para">We're looking out for your device and data.</p> */}
       
       <div className="anti-ai-box">
-        <h2>AntiAi protect your device</h2>
+        <h2>Get Secure With Us</h2>
         <p>"Anti-AI is a tool that protects against the influence and risks of artificial intelligence, safeguarding users from potential risks associated with AI technology."</p>
       </div>
       
@@ -18,7 +18,7 @@ function Dashboard() {
         <FeatureBox icon="🔒" title="Block Ai tools" />
         <FeatureBox icon="🖥️" title="System Ai Scan" />
         <Link to="/payments">
-          <FeatureBox icon="🔍" title="subscription" />
+          <FeatureBox icon="🔍" title="Subscription" />
         </Link>
         <FeatureBox icon="Ai" title="Secure Ai Tools" />
         <FeatureBox icon="👆" title="Id Protection" />

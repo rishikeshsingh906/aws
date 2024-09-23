@@ -51,11 +51,11 @@ const Header = ({ onUpgradeClick }) => {
             </div>
             <div className="center">
                 {/* <button className="upgrade-btn" onClick={handleClickUpgrade}>Upgrade</button> */}
-                <button className="view-options-btn" onClick={downExtension}>Download</button>
+                <button className="view-options-btn" onClick={downExtension}>Download Extension</button>
             </div>
             <div className="right">
                 {/* <span className="user-name">{username}</span>  */}
-                <span className="icon">🔔</span> 
+                <span className="icon-">🔔</span> 
                 <img src={profileIcon} alt="Profile" className="profile-icon" style={{ width: "40px",
         height: "37px",
         borderRadius: "50%", 

@@ -1,14 +1,12 @@
-
-
 .dashboard2 {
   width: 100%;
-  
+
   text-align: center;
   padding: 20px;
   background-color: #2b3244;
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-  opacity:0.95;
+  opacity: 0.95;
   height: 160%;
 }
 
@@ -22,13 +20,13 @@
   color: #f7faf7;
   padding-bottom: 20px;
   font-size: 32px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:cursive;
 }
 
 
 .close-all-button {
   color: white;
-  margin: 10px auto; 
+  margin: 10px auto;
   padding: 10px 20px;
   font-size: 18px;
   border-radius: 60px;
@@ -53,7 +51,7 @@
 .protection-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
+  justify-content: center;
   margin-bottom: 20px;
   gap: 20px;
 }
@@ -64,7 +62,7 @@
   border-radius: 8px;
   padding: 20px;
   width: 100%;
-  max-width: 250px; 
+  max-width: 250px;
   margin: 10px;
   text-align: center;
   transition: transform 0.3s ease;
@@ -108,7 +106,8 @@
 .scan-status p:last-child {
   color: #faf6f6;
 }
-.dashboard-links p{
+
+.dashboard-links p {
   color: white;
 }
 
@@ -128,12 +127,12 @@
 
 .dashboard-icon {
   width: 50px;
-    height: 50px;
+  height: 50px;
 }
 
 
 .block-button {
-  padding: 5px 10px;
+  padding: 5px 5px;
   border: none;
   background-color: #f00;
   color: #fff;
@@ -152,12 +151,12 @@
 .close-all-button {
   background-color: #f00;
   color: white;
-  margin: 10px auto; 
+  margin: 10px auto;
   padding: 10px 20px;
   font-size: 18px;
   border-radius: 23px;
   cursor: pointer;
-  display: block; 
+  display: block;
   transition: background-color 0.3s ease;
 }
 
@@ -177,6 +176,5 @@
     opacity: 0.95;
     height: 160%;
     margin-left: 25%;
+  }
 }
-}
-
