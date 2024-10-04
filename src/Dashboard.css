@@ -1,7 +1,7 @@
 .dashboard {
   padding: 20px;
   box-sizing: border-box;
-  height: 100%;
+  height: 120vh;
   background-color: #2b3244;
 }
 
@@ -158,11 +158,128 @@ span.icon {
   }
 }
 
-/* @media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .dashboard {
-      width: 100%;
-      padding: 10px;
-      margin-left: 0%;
-      height: 167%;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #2b3244;
   }
-} */
+  
+  .dashboard h1 {
+    color: white;
+    margin-top: 10px;
+    font-size: 3rem;
+    text-align: center;
+}
+  
+  .dashboard .para {
+    color: white;
+    font-size: 1rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .anti-ai-box {
+    background-color: #f0f0f0;
+    padding:20px;
+    margin: 20px 0;
+    border-radius: 34px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(21, 21, 21);
+  }
+  
+  .anti-ai-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #0a0909;
+  }
+  
+  .anti-ai-box p {
+    font-size: 1rem;
+    /* color: #333; */
+  }
+  
+  .features-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    margin: 20px;
+    margin-top: 50px;
+    color: black;
+  }
+  
+  
+  .features-grid  a {
+    text-decoration: none;
+    color: #0a0909;
+  }
+  
+  .feature-box {
+    background-color: #f0f0f0;
+    padding: 42px;
+    border-radius: 34px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  span.icon {
+    font-size: 2.6em;
+  }
+  .toggle-switch {
+    display: flex;
+    justify-content: space-between;
+    width: 13%;
+    max-width: 300px;
+    height: 34px;
+    background-color: #0a0909;
+    border-radius: 17px;
+    cursor: pointer;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .switch-handle {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border-radius: 17px;
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+    font-weight: bold;
+    transition: left 0.4s;
+  }
+  
+  .blocked {
+    left: 0;
+  }
+  
+  
+  .unblocked {
+    left: 50%;
+  }
+  
+  .switch-label {
+    flex: 1;
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.875rem;
+  }
+  
+}

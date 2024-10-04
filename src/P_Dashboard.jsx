@@ -25,13 +25,13 @@ const P_Dashboard = () => {
     "https://chatgpt.com": ChatGPTIcon,
     "https://claude.ai": ClaudeIcon,
     "https://gemini.google.com": Gemini,
-    "https://replit.com/": Replit,
-    "https://copilot.microsoft.com/": Copilot,
-    "https://www.deepbrain.io/": Deepbrain,
-    "https://seo.ai/": Seo_Ai,
-    "https://rytr.me/": Rytr,
-    "https://stability.ai/": Stability,
-    "https://www.jasper.ai/" : Jesper,
+    "https://replit.com": Replit,
+    "https://copilot.microsoft.com": Copilot,
+    "https://www.deepbrain.io": Deepbrain,
+    "https://seo.ai": Seo_Ai,
+    "https://rytr.me": Rytr,
+    "https://stability.ai": Stability,
+    "https://www.jasper.ai" : Jesper,
 
 
   };

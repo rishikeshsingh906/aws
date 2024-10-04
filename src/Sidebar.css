@@ -8,7 +8,7 @@
     align-items: center;
     padding: 20px 0;
     color: white;
-    height: 100%;
+    height: 120vh;
    
 }
 
@@ -26,7 +26,7 @@
     cursor: pointer;
 }
 
-.menu-item- {
+/* .menu-item {
     width: 100%;
     padding: 32px 0;
     display: flex;
@@ -34,7 +34,7 @@
     align-items: center;
     cursor: pointer;
     margin-top: 75%;
-}
+} */
 
 .menu-item.active {
     background-color: #123456;
@@ -75,7 +75,7 @@
     cursor: pointer;
 }
 
-@media  (max-width: 768px) {
+@media  (max-width: 600px) {
     .sidebar {
         width: 25%;
         background-color: #0a2a47;
@@ -102,3 +102,66 @@
         
     }
   } */
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .sidebar {
+        width: 12%;
+        background-color: #0a2a47;
+        height: 100vh;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        padding: 20px 0;
+        color: white;
+        height: 100%;
+       
+    }
+    .menu-item {
+        width: 100%;
+        padding: 32px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+.menu-item.active {
+    background-color: #123456;
+}
+.menu-item-.active {
+    background-color: #123456;
+}
+
+.icon img{
+    width: 29px;
+    height: 29px;
+    mix-blend-mode: color-burn;
+}
+
+.menu-item .icon {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+.menu-item- .icon {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.menu-item .text {
+    font-size: 15px;
+}
+
+.menu-item.notifications .badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.btn{
+    cursor: pointer;
+}
+    
+  }

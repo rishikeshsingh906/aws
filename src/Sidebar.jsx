@@ -56,7 +56,7 @@ const Sidebar = () => {
                 <span className="text">Product</span>
             </div>
             <div
-                className={`menu-item- ${activeSlide === 'Settings' ? 'active' : ''}`}
+                className={`menu-item ${activeSlide === 'Settings' ? 'active' : ''}`}
                 onClick={() => handleMenuClick('Settings', '/settings')}
             >
                 <span className="icon"><img src={Setting}></img></span>
