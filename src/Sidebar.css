@@ -6,9 +6,9 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    padding: 20px 0;
+    padding: 0.3% 0;
     color: white;
-    height: 120vh;
+    height: 100vh;
    
 }
 
@@ -19,7 +19,7 @@
 
 .menu-item {
     width: 100%;
-    padding: 32px 0;
+    padding: 20.5% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,8 +50,8 @@
 }
 
 .menu-item .icon {
-    font-size: 32px;
-    margin-bottom: 5px;
+    font-size: -1.8%;
+    margin-bottom: 0.5%;
 }
 .menu-item- .icon {
     font-size: 32px;
@@ -59,7 +59,7 @@
 }
 
 .menu-item .text {
-    font-size: 15px;
+    font-size: 95.3%;
 }
 
 .menu-item.notifications .badge {
